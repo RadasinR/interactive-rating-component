@@ -63,7 +63,7 @@ body {
 .bg-dark {
     background-color: var(--DARK-BLUE);
     color: var(--LIGHT-GREY);
-    background-image: linear-gradient(to bottom, var(--DARK-BLUE) , var(--VERY-DARK-BLUE) 130%);
+    background-image: radial-gradient(ellipse at top, var(--DARK-BLUE-FADE), var(--DARK-BLUE));
 }
 
 .logo {
