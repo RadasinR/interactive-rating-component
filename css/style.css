@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CUSTOME PROPERTIES */
+:root {
+    /* COLORS */
+
+    /* primary */
+
+    --ORANGE: hsl(25, 97%, 53%);
+
+    /* neutrals */
+
+    --WHITE: hsl(0, 0%, 100%);
+    --LIGHT-GREY: hsl(217, 12%, 63%);
+    --MEDIUM-GREY: hsl(216, 12%, 54%);
+    --DARK-BLUE: hsl(213, 19%, 18%);
+    --MEDIUM-BLUE: hsl(213, 19%, 23%);
+    --VERY-DARK-BLUE: hsl(216, 12%, 8%);
+
+    /* TYPOGRAPHY */
+
+    --FS: 0.95rem;
+    --FS-TITLE: 1.5rem;
+    --FF: 'Overpass', sans-serif;
+    --BOLD: 700;
+}
+
+/* GENERAL STYLE */
+
+body {
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--VERY-DARK-BLUE);
+    font-family: var(--FF);
+    font-size: var(--FS);
+
+}
+
+/* UTILS */
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important; 
+}
+
+.bg-dark {
+    background-color: var(--DARK-BLUE);
+    color: var(--LIGHT-GREY);
+}
+
+.logo {
+    background-color: var(--MEDIUM-BLUE);
+    border-radius: 50%;
+    padding: 0.9rem;
+
+}
+
+.gutter {
+    display: grid;
+    gap: 2rem;
+}
+
+
+
+/* STYLES */
+/* container */
+.component {
+    width: clamp(280px, 90vw, 27rem);
+    padding: 1.9rem;
+    border-radius: 1rem;
+}
+
+/* info */
+.info {
+    display: grid;
+    gap: 1rem;
+}
+
+.info__title {
+    color: var(--WHITE);
+    font-size: var(--FS-TITLE);
+    font-weight: var(--BOLD);
+}
+
+.info__text {
+    line-height: 1.5;
+}
+
+/* rating form */
+
+
+
+.btn-group-rating {
+    width: 100%;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    color: inherit;
+    font-family: inherit; 
+    border: transparent;
+    outline: transparent;
+    cursor: pointer;
+}
+
+.btn-rate-value {
+
+    width: calc(2 * var(--FS-TITLE));
+    height: calc(2 * var(--FS-TITLE));
+    padding: 0.8rem;
+    /* used padding to center in button  any better way*/
+    border-radius: 50%;
+    font-size: var(--FS-TITLE);
+    background-color: var(--MEDIUM-BLUE);
+}
+
+.btn-rate-value-selected {
+    cursor: not-allowed;
+    background-color: var(--LIGHT-GREY);
+    color: var(--WHITE);
+}
+
+.btn-rate-value:not(.btn-rate-value-selected):is(:hover) {
+    background-color: var(--ORANGE);
+    color: var(--WHITE);
+}
+
+.btn-submit {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    background-color: var(--ORANGE);
+    color: var(--WHITE);
+    border-radius: 1rem;
+    padding: 0.8rem;
+   
+}
+
+.btn-submit:is(:hover) {
+    background-color:var(--WHITE) ;
+    color: var(--ORANGE);
+}
+
+/* Thank you */
+
+.submited {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+
+    width: clamp(280px, 90vw, 400px);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.submited__rating {
+    color: var(--ORANGE);
+    background-color: var(--MEDIUM-BLUE);
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+}   
